@@ -1,0 +1,39 @@
+{
+  "name": "vite-solid-dnd",
+  "author": "antoniovalentic",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "private": "true",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "8.57.1",
+    "@nabla/vite-plugin-eslint": "^2.0.6",
+    "@types/eslint": "8.56.12",
+    "@unocss/preset-mini": "^66.5.0",
+    "@unocss/vite": "^66.5.0",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-solid": "^0.14.5",
+    "prettier": "^3.6.2",
+    "solid-devtools": "^0.34.3",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1",
+    "vite": "^7.1.4",
+    "vite-plugin-solid": "^2.11.8"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.9",
+    "solid-zustand": "^1.8.1",
+    "zustand": "^5.0.8"
+  }
+}
