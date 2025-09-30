@@ -19,6 +19,7 @@
 
     // Custom
     "paths": {
+      "@comp/*": ["./src/components/*"],
       "@models/*": ["./src/models/*"],
     },
   }
