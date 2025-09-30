@@ -12,7 +12,11 @@ type LinkProps = {
 export const ImageLink: Component<LinkProps> = (props) => {
   return (
     <a href={props.link} target="_blank">
-      <img src={props.src} class={unoMerge(styles.logo, props.class)} alt={props.alt || 'logo'} />
+      <img
+        src={props.src}
+        class={unoMerge(styles.logo, props.class)}
+        alt={props.alt || 'logo'}
+      />
     </a>
   );
 };

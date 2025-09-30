@@ -47,7 +47,8 @@ export default class Character {
   private calculateHealth() {
     const lv1Health = this.hitDice.sides + this.getModifier(this.stats.constitution);
     return (
-      lv1Health + (this.level - 1) * (lv1Health / 2 + this.getModifier(this.stats.constitution))
+      lv1Health +
+      (this.level - 1) * (lv1Health / 2 + this.getModifier(this.stats.constitution))
     );
   }
 

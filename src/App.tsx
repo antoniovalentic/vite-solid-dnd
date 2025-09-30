@@ -20,7 +20,9 @@ const App: Component = () => {
       <div class="card">
         <Counter />
       </div>
-      <p class="text-[#888]">Click on the Solid, Vite and TypeScript logos to learn more</p>
+      <p class="text-[#888]">
+        Click on the Solid, Vite and TypeScript logos to learn more
+      </p>
     </div>
   );
 };
