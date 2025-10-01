@@ -11,5 +11,12 @@ export const ThemeSwitch = () => {
     }
   };
 
-  return <button onClick={() => switchTheme()}>{userPrefs().theme}</button>;
+  const showTheme = () => {
+    if (userPrefs().theme !== 'dark') {
+      return 'light';
+    }
+    return 'dark';
+  };
+
+  return <button onClick={() => switchTheme()}>{showTheme()}</button>;
 };

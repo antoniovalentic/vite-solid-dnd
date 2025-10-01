@@ -1,0 +1,13 @@
+.button {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border-color: var(--color-accent);
+  transition:
+    background-color 0.1s,
+    border-color 0.1s;
+
+  &:hover {
+    background-color: var(--color-secondary-highlight);
+    border-color: var(--color-accent-highlight);
+  }
+}
