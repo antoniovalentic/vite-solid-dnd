@@ -21,6 +21,8 @@
     "paths": {
       "@comp/*": ["./src/components/*"],
       "@models/*": ["./src/models/*"],
-    },
+      "@store/*": ["./src/store/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
   }
 }

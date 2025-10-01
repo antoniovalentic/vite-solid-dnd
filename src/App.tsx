@@ -4,8 +4,16 @@ import typescriptLogo from '/assets/typescript.svg';
 import {Component} from 'solid-js';
 import {ImageLink} from '@comp/ImageLink';
 import {Counter} from '@comp/CounterGlobal';
+import {ThemeSwitch} from '@comp/ThemeSwitch';
+
+import usePrefsStore from '@store/userPrefs';
+import initTheme from '@utils/theme';
 
 const App: Component = () => {
+  // Initial theme selection
+  const themePref = usePrefsStore((store) => store.theme);
+  initTheme(themePref());
+
   return (
     <div>
       <ImageLink link="https://solidjs.com" src={solidLogo} alt="Solid.js logo" />
@@ -19,6 +27,9 @@ const App: Component = () => {
       <h1 class="text-[3.2em] line-height-[1.1]">Solid + Vite + TypeScript</h1>
       <div class="card">
         <Counter />
+      </div>
+      <div class="card">
+        <ThemeSwitch />
       </div>
       <p class="text-[#888]">
         Click on the Solid, Vite and TypeScript logos to learn more

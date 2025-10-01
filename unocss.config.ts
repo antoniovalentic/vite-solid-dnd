@@ -1,9 +1,22 @@
 import {defineConfig} from '@unocss/vite';
 import {presetMini} from '@unocss/preset-mini';
+import {presetLightDark} from 'unocss-preset-light-dark';
 
 export default defineConfig({
-  presets: [presetMini()],
-  shortcuts: [
+  presets: [
+    presetMini(),
+    presetLightDark({
+      dark: 'class',
+      light: 'class',
+      // CHECK OUT LATER: https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d90429
+      colors: {
+        primary: ['#f0f2f2', '#38393b'], // [light, dark]
+        secondary: ['#18202d', '#fffdfc'],
+        accent: '#9c4140', // same color for both modes
+      },
+    }),
+  ],
+  /*shortcuts: [
     {
       // shortcuts to multiple utilities
       btn: 'py-2 px-4 font-semibold rounded-lg shadow-md',
@@ -13,5 +26,5 @@ export default defineConfig({
     },
     // dynamic shortcuts (input-green, input-red etc.)
     [/^input-(.*)$/, ([, c]) => `bg-${c}-400 text-${c}-100 py-2 px-4 rounded-lg`],
-  ],
+  ],*/
 });
