@@ -1,4 +1,4 @@
-import usePrefsStore from '../store/userPrefs';
+import usePrefsStore from '@store/userPrefs';
 
 export const ThemeSwitch = () => {
   const userPrefs = usePrefsStore();

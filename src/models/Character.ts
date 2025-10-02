@@ -1,5 +1,5 @@
 import {Dice} from '@models/Dice';
-import {CharClass, baseClass} from './CharClass';
+import {CharClass, baseClass} from '@models/CharClass';
 
 type AblilityScore = number;
 

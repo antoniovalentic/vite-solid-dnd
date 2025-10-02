@@ -1,4 +1,4 @@
-import {Stats} from './Character';
+import {Stats} from '@models/Character';
 
 type PcClass = 'mage' | 'ranger' | 'rogue';
 type NpcClass = 'wildlife' | 'monster';

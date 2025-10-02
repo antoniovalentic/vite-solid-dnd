@@ -1,5 +1,5 @@
 import {Component} from 'solid-js';
-import useCounterStore from '../store/counter';
+import useCounterStore from '@store/counter';
 
 export const Counter: Component = () => {
   const count = useCounterStore((state) => state.count);
