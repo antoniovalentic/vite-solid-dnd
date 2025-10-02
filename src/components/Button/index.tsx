@@ -4,13 +4,19 @@ import {unoMerge} from 'unocss-merge';
 import styles from './styles.module.css';
 
 interface ButtonProps extends JSX.ButtonHTMLAttributes<HTMLButtonElement> {
-  title?: string;
-  showIcon?: boolean;
+  variant?: 'outline' | 'ghost' | 'link' | 'primary' | 'secondary';
 }
 
 const Button: ParentComponent<ButtonProps> = (props) => {
   return (
-    <button class={unoMerge(styles.button, props.class)} {...props}>
+    <button
+      {...props}
+      class={unoMerge(
+        styles.button,
+        props.variant && styles['button-' + props.variant],
+        props.class,
+      )}
+    >
       {props.children}
     </button>
   );

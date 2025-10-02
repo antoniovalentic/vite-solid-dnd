@@ -1,13 +1,59 @@
-.button {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-  border-color: var(--color-accent);
-  transition:
-    background-color 0.1s,
-    border-color 0.1s;
+.button,
+.button-outline {
+  width: fit-content;
+  border: 1px solid transparent;
 
-  &:hover {
-    background-color: var(--color-secondary-highlight);
-    border-color: var(--color-accent-highlight);
+  color: var(--color-primary);
+  background-color: rgb(from var(--color-secondary) r g b);
+  border-color: rgb(from var(--color-secondary-highlight) r g b / 50%);
+  transition: background-color 0.1s;
+
+  &:hover:enabled,
+  &:active:enabled {
+    background-color: rgb(from var(--color-secondary-highlight) r g b / 10%);
+  }
+}
+
+.button-primary {
+  border: unset;
+
+  color: var(--color-secondary);
+  background-color: rgb(from var(--color-primary) r g b);
+
+  &:hover:enabled,
+  &:active:enabled {
+    background-color: rgb(from var(--color-primary) r g b / 90%);
+  }
+}
+
+.button-secondary {
+  border: unset;
+
+  color: var(--color-primary);
+  background-color: rgb(from var(--color-secondary-highlight) r g b / 30%);
+
+  &:hover:enabled,
+  &:active:enabled {
+    background-color: rgb(from var(--color-secondary-highlight) r g b / 10%);
+  }
+}
+
+.button-ghost {
+  border: unset;
+
+  &:hover:enabled,
+  &:active:enabled {
+    background-color: rgb(from var(--color-secondary-highlight) r g b / 15%);
+  }
+}
+
+.button-link {
+  border: unset;
+
+  &:hover:enabled,
+  &:active:enabled {
+    background-color: unset;
+    text-underline-offset: 4px;
+    text-decoration: underline;
   }
 }

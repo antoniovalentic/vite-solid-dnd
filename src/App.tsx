@@ -27,7 +27,6 @@ const App: Component = () => {
         class="ts"
       />
       <h1 class="text-[3.2em] line-height-[1.1]">Solid + Vite + TypeScript</h1>
-      <h2 class="text-primary dark:bg-blue light:bg-yellow">TEST TEXT</h2>
       <a>TEST LINK</a>
       <div class="card">
         <Counter />
@@ -35,8 +34,29 @@ const App: Component = () => {
       <div class="card">
         <ThemeSwitch />
       </div>
-      <div class="card">
-        <Button>TEST BUTTON</Button>
+      <div class="card flex flex-col gap-2">
+        <Button variant="outline">BUTTON OUTLINE</Button>
+        <Button variant="primary">BUTTON PRIMARY</Button>
+        <Button variant="secondary">BUTTON SECONDARY</Button>
+        <Button variant="ghost">BUTTON GHOST</Button>
+        <Button variant="link">BUTTON LINK</Button>
+      </div>
+      <div class="card flex flex-col gap-2">
+        <Button disabled variant="outline">
+          DISABLED OUTLINE
+        </Button>
+        <Button disabled variant="primary">
+          DISABLED PRIMARY
+        </Button>
+        <Button disabled variant="secondary">
+          DISABLED SECONDARY
+        </Button>
+        <Button disabled variant="ghost">
+          DISABLED GHOST
+        </Button>
+        <Button disabled variant="link">
+          DISABLED LINK
+        </Button>
       </div>
       <p class="text-[#888]">
         Click on the Solid, Vite and TypeScript logos to learn more

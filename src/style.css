@@ -1,21 +1,34 @@
 :root,
 :root.light {
   /* DEFAULT COLOR SCHEME */
-  --color-primary: #38393b;
+  /*--color-primary: #38393b;
   --color-primary-highlight: #3f4145;
   --color-secondary: #fffdfc;
   --color-secondary-highlight: #f4f1ef;
   --color-accent: #9c4140;
-  --color-accent-highlight: #b13c3a;
+  --color-accent-highlight: #b13c3a;*/
+
+  --color-primary: #2b2d42;
+  --color-primary-highlight: #8d99ae;
+  --color-secondary: #edf2f4;
+  --color-secondary-highlight: #8d99ae;
+  --color-accent: #d90429;
+  --color-accent-highlight: #ef233c;
 }
 :root.dark {
   /* DARK COLOR SCHEME */
-  --color-primary: #f0f2f2;
+  /*--color-primary: #f0f2f2;
   --color-primary-highlight: #e7eeee;
   --color-secondary: #18202d;
   --color-secondary-highlight: #1d283a;
   --color-accent: #9c4140;
-  --color-accent-highlight: #b13c3a;
+  --color-accent-highlight: #b13c3a;*/
+  --color-primary: #edf2f4;
+  --color-primary-highlight: #8d99ae;
+  --color-secondary: #2b2d42;
+  --color-secondary-highlight: #8d99ae;
+  --color-accent: #d90429;
+  --color-accent-highlight: #ef233c;
 }
 
 :root {
@@ -55,11 +68,12 @@ a {
   font-weight: 500;
   color: var(--color-accent);
   text-decoration: inherit;
-  cursor: pointer;
   transition: color 0.25s;
-}
-a:hover {
-  color: var(--color-accent-highlight);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-accent-highlight);
+  }
 }
 
 h1 {
@@ -77,18 +91,18 @@ h1 {
 
 button {
   border-radius: 6px;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  cursor: pointer;
-  transition: border-color 0.25s;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border-color: rgb(from var(--color-secondary-highlight) r g b / 50%);
+  transition: background-color 0.1s;
 
-  &:hover {
-    border-color: var(--color-accent);
+  &:enabled {
+    cursor: pointer;
   }
 }
 
