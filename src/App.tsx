@@ -1,5 +1,6 @@
 import viteLogo from '/vite.svg';
 import solidLogo from '/solidjs.svg';
+import unocssLogo from '/unocss.svg';
 import typescriptLogo from '/assets/typescript.svg';
 
 import {Component} from 'solid-js';
@@ -20,13 +21,14 @@ const App: Component = () => {
     <div>
       <ImageLink link="https://solidjs.com" src={solidLogo} alt="Solid.js logo" />
       <ImageLink link="https://vitejs.dev" src={viteLogo} alt="Vite logo" class="vite" />
+      <ImageLink link="https://unocss.dev" src={unocssLogo} alt="UnoCSS logo" />
       <ImageLink
         link="https://www.typescriptlang.org/"
         src={typescriptLogo}
         alt="TypeScript logo"
         class="ts"
       />
-      <h1 class="text-[3.2em] line-height-[1.1]">Solid + Vite + TypeScript</h1>
+      <h1 class="text-[3.2em] line-height-[1.1]">Solid + Vite + UnoCSS + TypeScript</h1>
       <a>TEST LINK</a>
       <div class="card">
         <Counter />
