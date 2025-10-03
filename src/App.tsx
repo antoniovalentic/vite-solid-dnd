@@ -11,6 +11,7 @@ import {ThemeSwitch} from '@comp/ThemeSwitch';
 import usePrefsStore from '@store/userPrefs';
 import initTheme from '@utils/theme';
 import Button from '@comp/Button';
+import Accordion from '@comp/Accordion';
 
 const App: Component = () => {
   // Initial theme selection
@@ -35,6 +36,16 @@ const App: Component = () => {
       </div>
       <div class="card">
         <ThemeSwitch />
+      </div>
+      <div class="card flex flex-col gap-2">
+        <Accordion>
+          <Accordion.Item>
+            <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+            <Accordion.Content>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </Accordion.Content>
+          </Accordion.Item>
+        </Accordion>
       </div>
       <div class="card flex flex-col gap-2">
         <Button variant="outline">BUTTON OUTLINE</Button>
