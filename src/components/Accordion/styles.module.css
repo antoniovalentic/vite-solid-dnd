@@ -1,0 +1,49 @@
+.accordion {
+}
+
+.item {
+  border-color: rgb(from var(--color-secondary-highlight) r g b / 30%);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.trigger {
+  display: flex;
+
+  & > button {
+    background: unset;
+    border: unset;
+    padding: unset;
+
+    padding-block: 16px;
+
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    transition-property: all;
+    transition-duration: 0.15s;
+
+    font-size: 1em;
+    font-weight: 500;
+
+    &:hover:enabled,
+    &:active:enabled {
+      background-color: unset;
+      text-underline-offset: 4px;
+      text-decoration: underline;
+    }
+
+    & > svg {
+      transition-property: all;
+      transition-duration: 0.2s;
+    }
+    &[data-expanded] > svg {
+      rotate: 180deg;
+    }
+  }
+}
+
+.content {
+}

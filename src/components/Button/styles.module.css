@@ -1,7 +1,12 @@
 .button,
 .button-outline {
   width: fit-content;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
   border: 1px solid transparent;
+
+  font-size: 1em;
+  font-weight: 500;
 
   color: var(--color-primary);
   background-color: rgb(from var(--color-secondary) r g b);
